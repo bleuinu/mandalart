@@ -1,8 +1,89 @@
-#app {
+:root {
+  font-size: 62.5%;
   font-family: Avenir, Helvetica, Arial, sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+  position: relative;
+}
+
+.mandalart {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  width: 72rem;
+  height: 72rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10rem auto;
 }
+
+.grid {
+  width: 24rem;
+  height: 24rem;
+  margin: 1rem;
+  border: 1px solid #00000054;
+  z-index: 1028;
+  background-color: white;
+  display: grid;
+  gap: 0rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid__item {
+  border: 1px solid #00000054;
+  margin: 0;
+  z-index: 2;
+}
+.grid__item:nth-child(5) {
+  background-color: #bedcff;
+}
+.grid:hover {
+  cursor: pointer;
+  box-shadow: 0 0 0.5rem #7db9ff;
+}
+.grid--main {
+  background-color: #bedcff;
+}
+.grid--main .grid__item:nth-child(5) {
+  background-color: #7db9ff;
+}
+
+.grid_edit {
+  position: absolute;
+  width: 48rem;
+  height: 48rem;
+  margin: 1rem;
+  border: 1px solid #00000054;
+  z-index: 1028;
+  background-color: white;
+  display: none;
+  gap: 0rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid_edit button[data-action=cancel] {
+  position: absolute;
+  bottom: -3rem;
+}
+.grid_edit button[data-action=save] {
+  position: absolute;
+  bottom: -3rem;
+  left: 7rem;
+}
+.grid_edit__item {
+  border: 1px solid #00000054;
+  margin: 0;
+  z-index: 2;
+}
+.grid_edit__item:nth-child(5) {
+  background-color: #bedcff;
+}
+.grid_edit--main {
+  background-color: #bedcff;
+}
+.grid_edit--main .grid__item:nth-child(5) {
+  background-color: #7db9ff;
+}
+
+/*# sourceMappingURL=style.css.map */

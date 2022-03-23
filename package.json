@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "scss": "sass ./src/style.scss:./src/style.css --watch"
   },
   "devDependencies": {
     "typescript": "^4.5.4",
